@@ -85,7 +85,7 @@ const LogHistory: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
         <div>
           <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
             Attendance History
@@ -97,8 +97,8 @@ const LogHistory: React.FC = () => {
       </div>
 
       {/* Filters */}
-      <Card>
-        <div className="p-4">
+      <Card className="p-2 sm:p-4">
+        <div>
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
@@ -130,8 +130,8 @@ const LogHistory: React.FC = () => {
       </Card>
 
       {/* Attendance Records */}
-      <Card>
-        <div className="p-6">
+      <Card className="p-2 sm:p-6">
+        <div>
           {filteredRecords.length === 0 ? (
             <div className="text-center py-12">
               <Calendar className="h-16 w-16 mx-auto mb-4 text-slate-300" />

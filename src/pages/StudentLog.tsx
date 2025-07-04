@@ -53,7 +53,7 @@ const StudentLog: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
         <div>
           <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
             My Sessions
@@ -64,8 +64,8 @@ const StudentLog: React.FC = () => {
         </div>
       </div>
 
-      <Card>
-        <div className="p-6">
+      <Card className="p-2 sm:p-6">
+        <div>
           {sessions.length === 0 ? (
             <div className="text-center py-12">
               <Calendar className="h-16 w-16 mx-auto mb-4 text-slate-300" />
@@ -83,7 +83,7 @@ const StudentLog: React.FC = () => {
                   key={session.id}
                   className="border border-slate-200 dark:border-slate-700 rounded-lg p-4 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                 >
-                  <div className="flex items-start justify-between">
+                  <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-0">
                     <div className="flex items-start space-x-4">
                       <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                         <Car className="h-5 w-5 text-blue-600" />
@@ -99,7 +99,7 @@ const StudentLog: React.FC = () => {
                           </span>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-600 dark:text-slate-400">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 text-sm text-slate-600 dark:text-slate-400">
                           <div className="flex items-center space-x-2">
                             <Calendar className="h-4 w-4" />
                             <span>{new Date(session.date).toLocaleDateString()}</span>

@@ -70,7 +70,7 @@ const StudentProfile: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
         <div>
           <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
             Student Profile
@@ -82,8 +82,8 @@ const StudentProfile: React.FC = () => {
       </div>
 
       {/* Student Info */}
-      <Card>
-        <div className="p-6">
+      <Card className="p-2 sm:p-6">
+        <div>
           <div className="flex items-start space-x-6">
             <div className="h-20 w-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
               <span className="text-blue-600 dark:text-blue-300 font-bold text-2xl">
@@ -118,7 +118,7 @@ const StudentProfile: React.FC = () => {
       </Card>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <Card className="p-4">
           <div className="flex items-center">
             <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
@@ -169,8 +169,8 @@ const StudentProfile: React.FC = () => {
       </div>
 
       {/* Progress Bar */}
-      <Card>
-        <div className="p-6">
+      <Card className="p-2 sm:p-6">
+        <div>
           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
             Course Progress
           </h3>
@@ -205,8 +205,8 @@ const StudentProfile: React.FC = () => {
       </Card>
 
       {/* Recent Attendance */}
-      <Card>
-        <div className="p-6">
+      <Card className="p-2 sm:p-6">
+        <div>
           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
             Recent Attendance
           </h3>
@@ -254,8 +254,8 @@ const StudentProfile: React.FC = () => {
       </Card>
 
       {/* Status */}
-      <Card>
-        <div className="p-6">
+      <Card className="p-2 sm:p-6">
+        <div>
           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
             Current Status
           </h3>
