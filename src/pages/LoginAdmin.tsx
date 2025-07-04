@@ -41,8 +41,8 @@ const LoginAdmin: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center px-4">
-              <div className="w-full max-w-md">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center px-4 py-8">
+              <div className="w-full max-w-md mx-auto">
           {/* Back to Landing and Theme Toggle */}
           <div className="flex items-center justify-between mb-8">
             <Link 
@@ -54,13 +54,13 @@ const LoginAdmin: React.FC = () => {
             </Link>
           </div>
 
-        <Card className="p-8">
+        <Card className="p-4 sm:p-6 md:p-8">
           {/* Header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6 sm:mb-8">
             <div className="h-16 w-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="h-8 w-8 text-blue-600" />
             </div>
-            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100">
               Admin Login
             </h1>
             <p className="text-slate-600 dark:text-slate-400 mt-2">
@@ -76,7 +76,7 @@ const LoginAdmin: React.FC = () => {
           )}
 
           {/* Login Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Phone Number
@@ -118,7 +118,7 @@ const LoginAdmin: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
               <label className="flex items-center">
                 <input
                   type="checkbox"
@@ -150,7 +150,7 @@ const LoginAdmin: React.FC = () => {
           </form>
 
           {/* Demo Credentials */}
-          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+          <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
             <h3 className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-2">
               Demo Credentials:
             </h3>
@@ -161,7 +161,7 @@ const LoginAdmin: React.FC = () => {
           </div>
 
           {/* Footer Links */}
-          <div className="mt-8 text-center">
+          <div className="mt-6 sm:mt-8 text-center">
             <p className="text-sm text-slate-600 dark:text-slate-400">
               Don't have an account?{' '}
               <Link

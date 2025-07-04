@@ -84,8 +84,8 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card className="p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <Card className="p-3 sm:p-4">
           <div className="flex items-center">
             <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
               <Calendar className="h-5 w-5 text-blue-600" />
@@ -97,7 +97,7 @@ const Dashboard: React.FC = () => {
           </div>
         </Card>
 
-        <Card className="p-4">
+        <Card className="p-3 sm:p-4">
           <div className="flex items-center">
             <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
               <UserCheck className="h-5 w-5 text-green-600" />
@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
           </div>
         </Card>
 
-        <Card className="p-4">
+        <Card className="p-3 sm:p-4">
           <div className="flex items-center">
             <div className="p-2 bg-orange-100 dark:bg-orange-900 rounded-lg">
               <Users className="h-5 w-5 text-orange-600" />
@@ -121,7 +121,7 @@ const Dashboard: React.FC = () => {
           </div>
         </Card>
 
-        <Card className="p-4">
+        <Card className="p-3 sm:p-4">
           <div className="flex items-center">
             <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">
               <TrendingUp className="h-5 w-5 text-purple-600" />
@@ -135,8 +135,8 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Today's Sessions */}
-      <Card>
-        <div className="flex items-center justify-between mb-6">
+      <Card className="p-2 sm:p-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0 mb-4 sm:mb-6">
           <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
             Today's Sessions
           </h2>
@@ -160,9 +160,9 @@ const Dashboard: React.FC = () => {
               return (
                 <div
                   key={session.id}
-                  className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-700 rounded-lg border-l-4 border-blue-500"
+                  className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 sm:p-4 bg-slate-50 dark:bg-slate-700 rounded-lg border-l-4 border-blue-500 gap-3 sm:gap-0"
                 >
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-3 sm:space-x-4">
                     <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                       <Clock className="h-5 w-5 text-blue-600" />
                     </div>
@@ -170,7 +170,7 @@ const Dashboard: React.FC = () => {
                       <h3 className="font-medium text-slate-900 dark:text-slate-100">
                         {session.studentName}
                       </h3>
-                      <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
+                      <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm text-slate-600 dark:text-slate-400">
                         <span>{session.time}</span>
                         <span>•</span>
                         <span className={timeStatus.color}>{timeStatus.label}</span>
@@ -180,7 +180,7 @@ const Dashboard: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-2">
+                  <div className="flex flex-wrap items-center gap-1 sm:gap-2">
                     {session.attendanceStatus ? (
                       <div className="flex items-center space-x-2">
                         {session.attendanceStatus === 'present' ? (
@@ -201,7 +201,7 @@ const Dashboard: React.FC = () => {
                         )}
                       </div>
                     ) : user?.role === 'admin' ? (
-                      <div className="flex items-center space-x-1">
+                      <div className="flex flex-wrap items-center gap-1">
                         <Button
                           variant="ghost"
                           size="sm"
@@ -250,7 +250,7 @@ const Dashboard: React.FC = () => {
       {/* Quick Actions */}
       {user?.role === 'admin' && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Card className="p-6">
+          <Card className="p-3 sm:p-6">
             <div className="flex items-center mb-4">
               <CheckSquare className="h-6 w-6 text-blue-600 mr-3" />
               <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Quick Check-in</h3>
@@ -263,7 +263,7 @@ const Dashboard: React.FC = () => {
             </Button>
           </Card>
 
-          <Card className="p-6">
+          <Card className="p-3 sm:p-6">
             <div className="flex items-center mb-4">
               <Calendar className="h-6 w-6 text-green-600 mr-3" />
               <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">View History</h3>
