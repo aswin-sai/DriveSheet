@@ -208,7 +208,9 @@ const Dashboard: React.FC = () => {
                           icon={Phone}
                           onClick={() => window.open(`tel:${session.studentPhone}`)}
                           className="p-2"
-                        />
+                        >
+                          Call
+                        </Button>
                         <Button
                           variant="outline"
                           size="sm"
@@ -249,7 +251,7 @@ const Dashboard: React.FC = () => {
 
       {/* Quick Actions */}
       {user?.role === 'admin' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Card className="p-3 sm:p-6">
             <div className="flex items-center mb-4">
               <CheckSquare className="h-6 w-6 text-blue-600 mr-3" />
@@ -273,6 +275,19 @@ const Dashboard: React.FC = () => {
             </p>
             <Button variant="secondary" href="/log-history" className="w-full">
               View History
+            </Button>
+          </Card>
+
+          <Card className="p-3 sm:p-6">
+            <div className="flex items-center mb-4">
+              <Users className="h-6 w-6 text-purple-600 mr-3" />
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Student Management</h3>
+            </div>
+            <p className="text-slate-600 dark:text-slate-400 mb-4">
+              View all student details and monthly attendance data for rechecking.
+            </p>
+            <Button variant="secondary" href="/admin-dashboard" className="w-full">
+              Manage Students
             </Button>
           </Card>
         </div>

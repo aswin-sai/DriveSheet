@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import { Car, Users, Calendar, History, LogOut } from 'lucide-react';
+import { Car, Users, Calendar, History, LogOut, UserCheck } from 'lucide-react';
 
 interface SidebarProps {
   open: boolean;
@@ -16,6 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
 
   const navItems = user?.role === 'admin' ? [
     { path: '/admin/dashboard', label: 'Dashboard', icon: Car },
+    { path: '/admin/admin-dashboard', label: 'Student Management', icon: UserCheck },
     { path: '/admin/student-log', label: 'Student Log', icon: Users },
     { path: '/admin/log-history', label: 'History', icon: History },
   ] : [

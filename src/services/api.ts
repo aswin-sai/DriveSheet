@@ -350,6 +350,97 @@ export const attendanceService = {
         date: '2024-02-01',
         status: 'present',
         notes: 'Night driving practice completed'
+      },
+      // Additional historical data for comprehensive view
+      {
+        id: '7',
+        studentId: '1',
+        studentName: 'Priya Sharma',
+        sessionId: '7',
+        date: '2024-01-30',
+        status: 'present',
+        notes: 'Practical session - city driving'
+      },
+      {
+        id: '8',
+        studentId: '1',
+        studentName: 'Priya Sharma',
+        sessionId: '8',
+        date: '2024-01-28',
+        status: 'late',
+        notes: 'Arrived 10 minutes late'
+      },
+      {
+        id: '9',
+        studentId: '1',
+        studentName: 'Priya Sharma',
+        sessionId: '9',
+        date: '2024-01-25',
+        status: 'present',
+        notes: 'Highway driving practice'
+      },
+      {
+        id: '10',
+        studentId: '2',
+        studentName: 'Arjun Patel',
+        sessionId: '10',
+        date: '2024-01-30',
+        status: 'present',
+        notes: 'Theory session completed'
+      },
+      {
+        id: '11',
+        studentId: '2',
+        studentName: 'Arjun Patel',
+        sessionId: '11',
+        date: '2024-01-28',
+        status: 'present',
+        notes: 'Practical session - parking practice'
+      },
+      {
+        id: '12',
+        studentId: '3',
+        studentName: 'Aisha Khan',
+        sessionId: '12',
+        date: '2024-01-30',
+        status: 'absent',
+        notes: 'Called to reschedule'
+      },
+      {
+        id: '13',
+        studentId: '3',
+        studentName: 'Aisha Khan',
+        sessionId: '13',
+        date: '2024-01-28',
+        status: 'present',
+        notes: 'Theory session - traffic rules'
+      },
+      {
+        id: '14',
+        studentId: '4',
+        studentName: 'Rahul Singh',
+        sessionId: '14',
+        date: '2024-01-30',
+        status: 'present',
+        notes: 'Final test preparation'
+      },
+      {
+        id: '15',
+        studentId: '5',
+        studentName: 'Zara Ahmed',
+        sessionId: '15',
+        date: '2024-01-30',
+        status: 'present',
+        notes: 'Basic driving skills'
+      },
+      {
+        id: '16',
+        studentId: '6',
+        studentName: 'Vikram Malhotra',
+        sessionId: '16',
+        date: '2024-01-30',
+        status: 'late',
+        notes: 'Arrived 5 minutes late'
       }
     ];
   },

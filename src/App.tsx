@@ -11,6 +11,7 @@ import StudentDashboard from './pages/StudentDashboard';
 import StudentLog from './pages/StudentLog';
 import LogHistory from './pages/LogHistory';
 import StudentProfile from './pages/StudentProfile';
+import AdminDashboard from './pages/AdminDashboard';
 import Layout from './components/layout/Layout';
 
 // Protected Route Component
@@ -46,6 +47,7 @@ const AdminRoutes: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/student-log" element={<StudentLog />} />
           <Route path="/log-history" element={<LogHistory />} />
           <Route path="/student/:id" element={<StudentProfile />} />
