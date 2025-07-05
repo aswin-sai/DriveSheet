@@ -33,49 +33,49 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
       )}
       <div
         className={`
-          fixed z-40 inset-y-0 left-0 w-64 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 transform transition-transform duration-200
-          md:static md:translate-x-0 md:block
+          fixed z-40 inset-y-0 left-0 w-64 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 transform transition-transform duration-300 ease-in-out
+          lg:static lg:translate-x-0 lg:block lg:z-auto
           ${open ? 'translate-x-0' : '-translate-x-full'}
         `}
-        style={{ maxWidth: '100vw' }}
+        style={{ maxWidth: 'calc(100vw - 2rem)' }}
       >
-        <div className="p-6">
-          <div className="flex items-center space-x-2">
-            <Car className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-slate-900 dark:text-slate-100">
+        <div className="p-4 sm:p-6">
+          <div className="flex items-center gap-3">
+            <Car className="h-8 w-8 text-blue-600 flex-shrink-0" />
+            <span className="text-xl font-bold text-slate-900 dark:text-slate-100 truncate">
               DriveSheet
             </span>
           </div>
         </div>
 
-        <nav className="px-4">
+        <nav className="px-3 sm:px-4 flex-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center space-x-3 px-3 py-2 rounded-lg mb-1 transition-colors ${
+                className={`flex items-center gap-3 px-3 py-3 rounded-lg mb-1 transition-all duration-200 ${
                   isActive(item.path)
-                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 shadow-sm'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-slate-100'
                 }`}
                 onClick={onClose}
               >
-                <Icon className="h-5 w-5" />
-                <span className="font-medium">{item.label}</span>
+                <Icon className="h-5 w-5 flex-shrink-0" />
+                <span className="font-medium truncate">{item.label}</span>
               </Link>
             );
           })}
         </nav>
 
-        <div className="absolute bottom-0 w-64 p-4 border-t border-slate-200 dark:border-slate-700">
+        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
           <button
             onClick={() => { logout(); onClose(); }}
-            className="flex items-center space-x-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 w-full"
+            className="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-slate-100 w-full transition-all duration-200"
           >
-            <LogOut className="h-5 w-5" />
-            <span className="font-medium">Logout</span>
+            <LogOut className="h-5 w-5 flex-shrink-0" />
+            <span className="font-medium truncate">Logout</span>
           </button>
         </div>
       </div>

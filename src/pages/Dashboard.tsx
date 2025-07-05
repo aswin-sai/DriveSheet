@@ -286,9 +286,14 @@ const Dashboard: React.FC = () => {
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               View all student details and monthly attendance data for rechecking.
             </p>
-            <Button variant="secondary" href="/admin-dashboard" className="w-full">
-              Manage Students
-            </Button>
+            <div className="space-y-2">
+              <Button variant="secondary" href="/admin-dashboard" className="w-full">
+                Manage Students
+              </Button>
+              <Button variant="outline" href="/admin-dashboard?view=monthly" className="w-full">
+                Monthly Report
+              </Button>
+            </div>
           </Card>
         </div>
       )}

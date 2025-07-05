@@ -26,7 +26,7 @@ const Input: React.FC<InputProps> = ({
   id,
   name
 }) => {
-  const baseClasses = 'w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent';
+  const baseClasses = 'w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-base';
   
   const classes = Icon 
     ? `${baseClasses} pl-10 ${className}`
@@ -35,7 +35,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="relative">
       {Icon && (
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
           <Icon className="h-5 w-5 text-slate-400" />
         </div>
       )}

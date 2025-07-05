@@ -41,29 +41,29 @@ const LoginAdmin: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center px-4 py-8">
-              <div className="w-full max-w-md mx-auto">
-          {/* Back to Landing and Theme Toggle */}
-          <div className="flex items-center justify-between mb-8">
-            <Link 
-              to="/" 
-              className="inline-flex items-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
-            >
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Home
-            </Link>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
+      <div className="w-full max-w-md sm:max-w-lg mx-auto">
+        {/* Back to Landing and Theme Toggle */}
+        <div className="flex items-center justify-between mb-6 sm:mb-8">
+          <Link 
+            to="/" 
+            className="inline-flex items-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Home
+          </Link>
+        </div>
 
-        <Card className="p-4 sm:p-6 md:p-8">
+        <Card className="p-6 sm:p-8 lg:p-10">
           {/* Header */}
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="h-16 w-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="h-8 w-8 text-blue-600" />
+          <div className="text-center mb-8 sm:mb-10">
+            <div className="h-20 w-20 sm:h-24 sm:w-24 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Shield className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600" />
             </div>
-            <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100 mb-3">
               Admin Login
             </h1>
-            <p className="text-slate-600 dark:text-slate-400 mt-2">
+            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
               Access your driving school management dashboard
             </p>
           </div>
@@ -76,9 +76,9 @@ const LoginAdmin: React.FC = () => {
           )}
 
           {/* Login Form */}
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              <label htmlFor="phone" className="block text-sm sm:text-base font-medium text-slate-700 dark:text-slate-300 mb-3">
                 Phone Number
               </label>
               <Input
@@ -89,12 +89,12 @@ const LoginAdmin: React.FC = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full"
+                className="w-full text-base"
               />
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              <label htmlFor="password" className="block text-sm sm:text-base font-medium text-slate-700 dark:text-slate-300 mb-3">
                 Password
               </label>
               <div className="relative">
@@ -106,31 +106,31 @@ const LoginAdmin: React.FC = () => {
                   value={formData.password}
                   onChange={handleChange}
                   required
-                  className="w-full pr-10"
+                  className="w-full pr-12 text-base"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 p-1"
                 >
-                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                 </button>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
               <label className="flex items-center">
                 <input
                   type="checkbox"
-                  className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  className="rounded border-slate-300 text-blue-600 focus:ring-blue-500 h-4 w-4"
                 />
-                <span className="ml-2 text-sm text-slate-600 dark:text-slate-400">
+                <span className="ml-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
                   Remember me
                 </span>
               </label>
               <Link
                 to="/forgot-password"
-                className="text-sm text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+                className="text-sm sm:text-base text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
               >
                 Forgot password?
               </Link>
@@ -139,7 +139,7 @@ const LoginAdmin: React.FC = () => {
             <Button
               type="submit"
               variant="primary"
-              className="w-full"
+              className="w-full text-base sm:text-lg py-3 sm:py-4"
               disabled={loading}
             >
               {loading ? (
